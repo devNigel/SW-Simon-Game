@@ -1,6 +1,8 @@
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function () {
-        navigator.serviceWorker.register('/SW-Simon-Game/sw.js').then(function (registration) {
+        navigator.serviceWorker.register('/SW-Simon-Game/sw.js',{
+            scope:'/SW-Simon-Game/'
+        }).then(function (registration) {
             // Registration was successful
             console.log('ServiceWorker registration successful with scope: ', registration.scope);
         }, function (err) {

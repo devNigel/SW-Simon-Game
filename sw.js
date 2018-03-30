@@ -30,6 +30,7 @@ event.waitUntil(
 });
 
 self.addEventListener('fetch', function (event){
+  console.log("SW from Simon Game at work");
   event.respondWith(
     caches.match(event.request).then(function(response){
      if(response) return response;
